@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1032703074158",
+    "project_id": "winjitexp1",
+    "storage_bucket": "winjitexp1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032703074158:android:b10b456eb4693629382b7f",
+        "android_client_info": {
+          "package_name": "com.aditys.winjitexp1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2OOHqAclyH2ke0_cUbrhdzEmXW4kDG6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
