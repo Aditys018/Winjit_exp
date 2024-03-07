@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract.Contacts.Data
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import com.aditys.winjitexp1.databinding.ActivityMainBinding
 import com.google.firebase.database.DataSnapshot
@@ -66,5 +67,26 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,UploadActivity::class.java)
             startActivity(intent)
         }
+
+        binding.search.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                searchList(newText)
+                return true
+            }
+
+        })
+    }
+    fun searchList(text:String){
+        val searchList = ArrayList<DataClass>()
+        for(dataClass in dataList){
+            if (dataClass.dataTitle?.lowercase()?.contains(text.lowercase()) == true){
+                searchList.add(dataClass)
+            }
+        }
+        adapter.searchDataList(searchList)
     }
 }

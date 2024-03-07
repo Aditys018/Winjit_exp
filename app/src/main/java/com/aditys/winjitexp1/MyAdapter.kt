@@ -39,6 +39,7 @@ class MyAdapter(private val context: Context, private var dataList: List<DataCla
     override fun getItemCount(): Int {
         return dataList.size
     }
+
     fun searchDataList(searchList: List<DataClass>) {
         dataList = searchList
         notifyDataSetChanged()

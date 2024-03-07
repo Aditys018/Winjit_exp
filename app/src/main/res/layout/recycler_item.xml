@@ -13,29 +13,30 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:background="#3e4670"
         android:layout_height="150dp">
-        
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/recImage"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/upload"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
             android:scaleType="centerCrop"
-            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"/>
+            android:src="@drawable/upload"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
 
         <TextView
             android:id="@+id/recTitle"
             android:layout_width="120dp"
             android:layout_height="30dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/recImage"
             android:text="Title"
-            android:textColor="@color/blue_500"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_toEndOf="@+id/recImage"/>
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/recPriority"
@@ -46,16 +47,16 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="90dp"
             android:textAlignment="center"
-            android:textColor="@color/blue_500"
-            android:textSize="16dp"/>
+            android:textColor="@color/white"
+            android:textSize="19dp"/>
         
         <TextView
             android:id="@+id/recDesc"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:text="Desc"
-            android:textColor="@color/blue_500"
-            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textSize="19sp"
             android:layout_toEndOf="@+id/recImage"
             android:layout_below="@+id/recTitle"
             android:layout_marginStart="20dp"
